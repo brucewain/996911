@@ -82,10 +82,11 @@ img {
 }
 
 .container{
-    display: inline-flex;
+    display: flex;
+    grid-template-columns: repeat(3,1fr);
     flex-wrap: wrap;
-    justify-content: center; 
-    margin-right: 2%;
+    justify-content: center;
+    margin-right:2%;
     margin-left: 2%;
     gap: 5px;
 }
@@ -93,7 +94,7 @@ img {
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (width > 600px) {
     :root{
         --fs-xl: 2.4rem;
         --fs-600:2rem;
@@ -105,7 +106,7 @@ img {
     }    
 }
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (width > 768px) {
     :root{
         --fs-xl: 2.6rem;
         --fs-600:2.4rem;
@@ -117,7 +118,7 @@ img {
         }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (width > 992px) {
     :root{
         --fs-xl: 5.8rem;
         --fs-600:3.6rem;
@@ -129,12 +130,12 @@ img {
     }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (width > 1200px) {
     :root{
         --fs-xl: 6rem;
-        --fs-600:3.8rem;
-        --fs-500:3.8rem;
-        --fs-400:1.7rem;
+        --fs-600: 3.8rem;
+        --fs-500: 3.8rem;
+        --fs-400: 2.1rem;
     }
 
     .article img{
